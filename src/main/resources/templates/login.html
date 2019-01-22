@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml"
+	  xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+	<title>Reservaciones</title>
+	<link rel="stylesheet" href = "/css/style.css" />
+</head>
+
+<body>
+	<div>
+		<h3>Reservaciones</h3>
+		<p th:if = "${param.error}" th:text = "${errorMsg}" class = "error"></p>
+		<form th:action="@{/app/login}" method="POST">
+			<fieldset>
+				<label class = "etiqueta"> Usuario: </label>
+				<input type = "text" name = "username" />
+				<br/> <br/>
+				
+				<label class = "etiqueta"> Clave: </label>
+				<input type = "password" name = "password" />
+				<br/> <br/>
+				
+				<input type = "submit" value = "ingresar" />
+			</fieldset>
+		</form>
+	</div>
+
+</body>
+</html>
